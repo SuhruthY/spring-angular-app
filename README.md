@@ -1,7 +1,3 @@
-# Spring Boot + Angular in GitHub Codespaces
+# Spring Boot + Angular Dev Container
 
-This template provides a dev-ready full stack application in Codespaces.
-
-- Spring Boot (Java 17)
-- Angular 15+
-- Devcontainer with VS Code extensions preinstalled
+This project sets up a full-stack development environment using VS Code Dev Containers with Spring Boot and Angular.

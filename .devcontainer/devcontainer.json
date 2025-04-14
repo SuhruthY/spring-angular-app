@@ -4,17 +4,26 @@
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "18"
-    }
+    },
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17",
+      "INSTALLMAVEN": "true",
+      "MAVENVERSION": "latest"
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
-  "postCreateCommand": "cd frontend && npm install && cd ../backend && ./mvnw clean install",
+  "postCreateCommand": "npm install -g @angular/cli && cd frontend && npm install && cd ../backend && ./mvnw clean install",
   "forwardPorts": [8080, 4200],
   "customizations": {
     "vscode": {
       "extensions": [
         "vscjava.vscode-java-pack",
         "angular.ng-template",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "redhat.java"
       ]
     }
-  }
+  },
+  "remoteUser": "vscode"
 }
