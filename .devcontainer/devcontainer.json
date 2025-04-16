@@ -13,6 +13,9 @@
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
   "postCreateCommand": "\
+    apt-get update && apt-get install -y git && \
+    git config --global init.defaultBranch master && \
+    git init && \
     npm install -g @angular/cli && \
     ng new frontend --routing=true --style=css --skip-tests --ssr && \
     cd frontend && npm install && \
