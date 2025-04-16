@@ -15,7 +15,13 @@ import lombok.Data;
 @RestController
 public class AppController{
 
-    List<Book> books = Arrays.asList(new Book("Pride and Prejudice", "Jane Austen"),new Book("Pride and Prejudice", "Jane Austen"),new Book("Pride and Prejudice", "Jane Austen"));
+    List<Book> books = Arrays.asList(
+        new Book("The Great Gatsby", "F. Scott Fitzgerald"),
+        new Book("1984", "George Orwell"),
+        new Book("To Kill a Mockingbird", "Harper Lee"),
+        new Book("One Hundred Years of Solitude", "Gabriel García Márquez"),
+        new Book("The Catcher in the Rye", "J.D. Salinger")
+    );
 
     @GetMapping
     String welcome(){
